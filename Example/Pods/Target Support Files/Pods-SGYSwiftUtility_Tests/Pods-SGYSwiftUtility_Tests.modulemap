@@ -1,0 +1,6 @@
+framework module Pods_SGYSwiftUtility_Tests {
+  umbrella header "Pods-SGYSwiftUtility_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
