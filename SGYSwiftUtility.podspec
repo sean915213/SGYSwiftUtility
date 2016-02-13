@@ -9,21 +9,19 @@
 Pod::Spec.new do |s|
   s.name             = "SGYSwiftUtility"
   s.version          = "0.1.0"
-  s.summary          = "A short description of SGYSwiftUtility."
+  s.summary          = "A bundle of Swift types and extensions."
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
 #   * Try to keep it short, snappy and to the point.
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!  
-  s.description      = <<-DESC
-                       DESC
-
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/SGYSwiftUtility"
+  s.description      = "A collection of structures, classes, and extensions that I've come to use in my various projects.  Most are simply extensions on existing classes, but some are fully fleshed out libraries (eg. vector math)."
+  s.homepage         = "https://github.com/sean915213/SGYSwiftUtility"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Sean G. Young" => "sean.g.young@gmail.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/SGYSwiftUtility.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/sean915213/SGYSwiftUtility.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform     = :ios, '8.0'
