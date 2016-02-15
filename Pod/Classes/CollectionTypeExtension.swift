@@ -10,37 +10,60 @@ import Foundation
 
 extension CollectionType {
     
-    /**
-     Returns the first object passing the test represented by the provided function.
+     /**
+     Returns the first value passing the test represented by `predicate`.
      
-     :param: fn A function that takes each object as a parameter and returns a boolean value.
+     - parameter predicate: A function that returns `Bool` to indicate whether the test is passed or not.
      
-     :returns: The first object where fn() returns true, or nil.
+     - throws: Rethrows any errors encountered executing `predicate`.
+     
+     - returns: The first value passing the test `predicate` or `nil` if no such object is found.
      */
-    func find(@noescape fn: (Generator.Element) -> Bool) -> Generator.Element? {
-        // Return first element where fn return is true
-        for val in self { if fn(val) { return val } }
-        return nil
+    func find(@noescape predicate: (Generator.Element) throws -> Bool) rethrows -> Generator.Element? {
+        guard let index = try indexOf(predicate) else { return nil }
+        return self[index]
     }
     
-    func any(@noescape fn: (Generator.Element) -> Bool) -> Bool {
-        for val in self { if fn(val) { return true } }
-        return false
+    /**
+     Returns whether any values in the `CollectionType` pass the test represented by `predicate`.
+     
+     - parameter predicate: A function that returns `Bool` to indicate whether the test is passed or not.
+     
+     - throws: Rethrows any errors encountered executing `predicate`.
+     
+     - returns: `true` if any value passes the test represented by `predicate`.  Otherwise returns `false`.
+     */
+    func any(@noescape predicate: (Generator.Element) throws -> Bool) rethrows -> Bool {
+        return try indexOf(predicate) != nil
     }
 }
 
 extension Set {
     
-    func map<U: Hashable>(@noescape fn: (Element) -> U) -> Set<U> {
-        var mappedSet = Set<U>()
-        for obj in self { mappedSet.insert(fn(obj)) }
+    /**
+     Provides an implementation of `SequenceType`'s `map` for Swift's `Set`.
+     
+     - parameter transform: A function that transform's each of `Set`'s `Element` to the provided type `T`.
+     
+     - throws: Rethrows any errors encountered executing `transform`.
+     
+     - returns: A new `Set` with values mapped using `transform`.
+     */
+    func map<T: Hashable>(@noescape transform: (Element) throws -> T) rethrows -> Set<T> {
+        var mappedSet = Set<T>()
+        for obj in self { mappedSet.insert(try transform(obj)) }
         return mappedSet
     }
 }
 
 extension Dictionary {
     
-    mutating func merge(dict: [Key: Value]) {
-        for (k, v) in dict { updateValue(v, forKey: k) }
+    /**
+     Merges in-place the contents of `dictionary` with this dictionary's keys and values.
+     
+     - parameter dictionary: A dictionary with the same `Key` and `Value` types.
+     */
+    mutating func merge(otherDictionary dictionary: [Key: Value]) {
+        for (k, v) in dictionary { updateValue(v, forKey: k) }
     }
 }

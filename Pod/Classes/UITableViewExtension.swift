@@ -11,29 +11,43 @@ import Foundation
 
 extension UITableView {
     
-    /**
-     Swift generic version of `UITableView`'s `dequeueReusableCell:withIdentifier:`. This method eliminates the need to cast the resulting cell by utilizing Swift's generics.
+     /**
+     Attempts dequeueing a registered `UITableViewCell` and casting to `T` before returning.
      
-     :param: identifier The `UITableViewCell`'s reuse identifier.
+     - parameter identifier: The cell's registered `reuseIdentifier`.
      
-     :returns: A typed version of the dequeued `UITableViewCell` or `nil`.
+     - returns: A dequeued `UITableViewCell` cast to `T`.  Returns `nil` if no cell is returned by the table.
      */
     func dequeueReusableCellWithIdentifier<T: UITableViewCell>(identifier: String) -> T? {
-        return self.dequeueReusableCellWithIdentifier(identifier) as? T
-    }
-    
-    func dequeueReusableCellWithIdentifier<T: UITableViewCell>(identifier: String, forIndexPath indexPath: NSIndexPath) -> T? {
-        return self.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath) as? T
+        // This version can return nil so make sure it returns a cell before force-casting
+        guard let cell = dequeueReusableCellWithIdentifier(identifier) else { return nil }
+        // Force cast
+        return (cell as! T)
     }
     
     /**
-     Swift generic version of UITableView's dequeueReusableHeaderFooterViewWithIdentifier. This method eliminates the need to cast the resulting view by utilizing Swift's generics.
+     Dequeues a registered `UITableViewCell` and casting to type `T` before returning.
      
-     :param: identifier The UITableViewHeaderFooterView's reuse identifier.
+     - parameter identifier: The cell's registered `reuseIdentifier`.
+     - parameter indexPath:  The index path to dequeue the cell for.
      
-     :returns: A typed version of the dequeued UITableViewHeaderFooterView or nil.
+     - returns: A dequeued `UITableViewCell` instance cast to `T`.  This method will always return a cell.
+     */
+    func dequeueReusableCellWithIdentifier<T: UITableViewCell>(identifier: String, forIndexPath indexPath: NSIndexPath) -> T {
+        return self.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath) as! T
+    }
+    
+    /**
+     Attempts dequeueing a registered `UITableViewHeaderFooterView` and casting to type `T` before returning.
+     
+     - parameter identifier: The view's registered `reuseIdentifier`.
+     
+     - returns: A dequeued `UITableViewHeaderFooterView` cast to `T`.  Returns `nil` if no reusable view was found in the queue.
      */
     func dequeueReusableHeaderFooterViewWithIdentifier<T: UITableViewHeaderFooterView>(identifier: String) -> T? {
-        return self.dequeueReusableHeaderFooterViewWithIdentifier(identifier) as? T
+        // Check view can be returned before force casting
+        guard let view = dequeueReusableHeaderFooterViewWithIdentifier(identifier) else { return nil }
+        // Force cast
+        return (view as! T)
     }
 }
