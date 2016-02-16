@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 #   * Try to keep it short, snappy and to the point.
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!  
-  s.description      = "A collection of structures, classes, and extensions that I've come to use in my various projects.  Most are simply extensions on existing classes, but some are fully fleshed out libraries (eg. vector math)."
+  s.description      = "A collection of extensions I use commonly in my classes. Mostly they consist of overloading common methods to implement Swift's generics.  Otherwise there are various useful extensions on several classes."
   s.homepage         = "https://github.com/sean915213/SGYSwiftUtility"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
