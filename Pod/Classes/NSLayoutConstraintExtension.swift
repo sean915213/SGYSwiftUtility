@@ -17,7 +17,7 @@ extension NSLayoutConstraint {
      
      - returns: An array of `NSLayoutConstraint` objects pinning the view.
      */
-    class func constraintsPinningView(view: UIView) -> [NSLayoutConstraint] {
+    public class func constraintsPinningView(view: UIView) -> [NSLayoutConstraint] {
         return constraintsPinningView(view, insets: UIEdgeInsetsZero)
     }
     
@@ -29,7 +29,7 @@ extension NSLayoutConstraint {
      
      - returns: An array of `NSLayoutConstraint` objects pinning the view.
      */
-    class func constraintsPinningView(view: UIView, insets: UIEdgeInsets) -> [NSLayoutConstraint] {
+    public class func constraintsPinningView(view: UIView, insets: UIEdgeInsets) -> [NSLayoutConstraint] {
         let hConstraints = NSLayoutConstraint.constraintsPinningView(view, axis: .Horizontal, leadMargin: insets.left, trailingMargin: insets.right)
         let vConstraints = NSLayoutConstraint.constraintsPinningView(view, axis: .Vertical, leadMargin: insets.top, trailingMargin: insets.bottom)
         return hConstraints + vConstraints
@@ -43,7 +43,7 @@ extension NSLayoutConstraint {
      
      - returns: An array of `NSLayoutConstraint` objects pinning `views` along `axis`.
      */
-    class func constraintsPinningViews(views: [UIView], axis: UILayoutConstraintAxis) -> [NSLayoutConstraint] {
+    public class func constraintsPinningViews(views: [UIView], axis: UILayoutConstraintAxis) -> [NSLayoutConstraint] {
         return constraintsPinningViews(views, axis: axis, leadMargin: 0, trailingMargin: 0)
     }
     
@@ -57,7 +57,7 @@ extension NSLayoutConstraint {
      
      - returns: An array of `NSLayoutConstraint` objects pinning `views` along `axis`.
      */
-    class func constraintsPinningViews(views: [UIView], axis: UILayoutConstraintAxis, leadMargin: CGFloat, trailingMargin: CGFloat) -> [NSLayoutConstraint] {
+    public class func constraintsPinningViews(views: [UIView], axis: UILayoutConstraintAxis, leadMargin: CGFloat, trailingMargin: CGFloat) -> [NSLayoutConstraint] {
         return views.flatMap { self.constraintsPinningView($0, axis: axis, leadMargin: leadMargin, trailingMargin: trailingMargin) }
     }
     
@@ -69,7 +69,7 @@ extension NSLayoutConstraint {
      
      - returns: An array of `NSLayoutConstraint` objects pinning `view` along `axis`.
      */
-    class func constraintsPinningView(view: UIView, axis: UILayoutConstraintAxis) -> [NSLayoutConstraint] {
+    public class func constraintsPinningView(view: UIView, axis: UILayoutConstraintAxis) -> [NSLayoutConstraint] {
         return constraintsPinningView(view, axis: axis, leadMargin: 0, trailingMargin: 0)
     }
     
@@ -83,7 +83,7 @@ extension NSLayoutConstraint {
      
      - returns: An array of `NSLayoutConstraint` objects pinning `view` along `axis`.
      */
-    class func constraintsPinningView(view: UIView, axis: UILayoutConstraintAxis, leadMargin: CGFloat, trailingMargin: CGFloat) -> [NSLayoutConstraint] {
+    public class func constraintsPinningView(view: UIView, axis: UILayoutConstraintAxis, leadMargin: CGFloat, trailingMargin: CGFloat) -> [NSLayoutConstraint] {
         
         let layoutViews = ["view" : view]
         let layoutMetrics = ["lead" : leadMargin, "trailing" : trailingMargin]

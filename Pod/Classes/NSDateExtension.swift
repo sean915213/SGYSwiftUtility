@@ -17,12 +17,12 @@ extension NSDate {
      
      - returns: An initialized `NSDate` instance.
      */
-    convenience init(unixTimeStamp: Double) {
+    public convenience init(unixTimeStamp: Double) {
         self.init(timeIntervalSince1970: unixTimeStamp / 1000.0)
     }
     
     /// Returns the `NSDate` instance's unix timestamp (ie. number of milliseconds since January 1, 1970).
-    var unixTimeStamp: Double {
+    public var unixTimeStamp: Double {
         return timeIntervalSince1970 * 1000
     }
 }

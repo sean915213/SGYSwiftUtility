@@ -19,7 +19,7 @@ extension CollectionType {
      
      - returns: The first value passing the test `predicate` or `nil` if no such object is found.
      */
-    func find(@noescape predicate: (Generator.Element) throws -> Bool) rethrows -> Generator.Element? {
+    public func find(@noescape predicate: (Generator.Element) throws -> Bool) rethrows -> Generator.Element? {
         guard let index = try indexOf(predicate) else { return nil }
         return self[index]
     }
@@ -33,7 +33,7 @@ extension CollectionType {
      
      - returns: `true` if any value passes the test represented by `predicate`.  Otherwise returns `false`.
      */
-    func any(@noescape predicate: (Generator.Element) throws -> Bool) rethrows -> Bool {
+    public func any(@noescape predicate: (Generator.Element) throws -> Bool) rethrows -> Bool {
         return try indexOf(predicate) != nil
     }
 }
@@ -49,7 +49,7 @@ extension Set {
      
      - returns: A new `Set` with values mapped using `transform`.
      */
-    func map<T: Hashable>(@noescape transform: (Element) throws -> T) rethrows -> Set<T> {
+    public func map<T: Hashable>(@noescape transform: (Element) throws -> T) rethrows -> Set<T> {
         var mappedSet = Set<T>()
         for obj in self { mappedSet.insert(try transform(obj)) }
         return mappedSet
@@ -63,7 +63,7 @@ extension Dictionary {
      
      - parameter dictionary: A dictionary with the same `Key` and `Value` types.
      */
-    mutating func merge(otherDictionary dictionary: [Key: Value]) {
+    public mutating func merge(otherDictionary dictionary: [Key: Value]) {
         for (k, v) in dictionary { updateValue(v, forKey: k) }
     }
 }

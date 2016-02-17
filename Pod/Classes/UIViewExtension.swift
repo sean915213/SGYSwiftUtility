@@ -17,7 +17,7 @@ extension UIView {
      
      - returns: An initialized `UIView` instance.
      */
-    convenience init(translatesAutoresizingMask: Bool) {
+    public convenience init(translatesAutoresizingMask: Bool) {
         self.init()
         translatesAutoresizingMaskIntoConstraints = translatesAutoresizingMask
     }
@@ -27,7 +27,7 @@ extension UIView {
      
      - parameter views: An array of `UIView` instances to add to this view.
      */
-    func addSubviews(views: [UIView]) {
+    public func addSubviews(views: [UIView]) {
         for view in views { addSubview(view) }
     }
 }

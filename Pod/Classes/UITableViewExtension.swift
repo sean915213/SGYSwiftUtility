@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 extension UITableView {
     
      /**
@@ -18,7 +17,7 @@ extension UITableView {
      
      - returns: A dequeued `UITableViewCell` cast to `T`.  Returns `nil` if no cell is returned by the table.
      */
-    func dequeueReusableCellWithIdentifier<T: UITableViewCell>(identifier: String) -> T? {
+    public func dequeueReusableCellWithIdentifier<T: UITableViewCell>(identifier: String) -> T? {
         // This version can return nil so make sure it returns a cell before force-casting
         guard let cell = dequeueReusableCellWithIdentifier(identifier) else { return nil }
         // Force cast
@@ -33,7 +32,7 @@ extension UITableView {
      
      - returns: A dequeued `UITableViewCell` instance cast to `T`.  This method will always return a cell.
      */
-    func dequeueReusableCellWithIdentifier<T: UITableViewCell>(identifier: String, forIndexPath indexPath: NSIndexPath) -> T {
+    public func dequeueReusableCellWithIdentifier<T: UITableViewCell>(identifier: String, forIndexPath indexPath: NSIndexPath) -> T {
         return self.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath) as! T
     }
     
@@ -44,7 +43,7 @@ extension UITableView {
      
      - returns: A dequeued `UITableViewHeaderFooterView` cast to `T`.  Returns `nil` if no reusable view was found in the queue.
      */
-    func dequeueReusableHeaderFooterViewWithIdentifier<T: UITableViewHeaderFooterView>(identifier: String) -> T? {
+    public func dequeueReusableHeaderFooterViewWithIdentifier<T: UITableViewHeaderFooterView>(identifier: String) -> T? {
         // Check view can be returned before force casting
         guard let view = dequeueReusableHeaderFooterViewWithIdentifier(identifier) else { return nil }
         // Force cast

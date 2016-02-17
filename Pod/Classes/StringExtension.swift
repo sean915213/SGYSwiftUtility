@@ -10,6 +10,6 @@ import Foundation
 
 extension String {
     /// The `String`'s length using utf-8 encoding.
-    var lengthWithUTF8Encoding: Int { return lengthOfBytesUsingEncoding(NSUTF8StringEncoding) }
+    public var lengthWithUTF8Encoding: Int { return lengthOfBytesUsingEncoding(NSUTF8StringEncoding) }
     
 }
