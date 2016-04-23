@@ -23,19 +23,6 @@ extension CollectionType {
         guard let index = try indexOf(predicate) else { return nil }
         return self[index]
     }
-    
-    /**
-     Returns whether any values in the `CollectionType` pass the test represented by `predicate`.
-     
-     - parameter predicate: A function that returns `Bool` to indicate whether the test is passed or not.
-     
-     - throws: Rethrows any errors encountered executing `predicate`.
-     
-     - returns: `true` if any value passes the test represented by `predicate`.  Otherwise returns `false`.
-     */
-    public func any(@noescape predicate: (Generator.Element) throws -> Bool) rethrows -> Bool {
-        return try indexOf(predicate) != nil
-    }
 }
 
 extension Set {
