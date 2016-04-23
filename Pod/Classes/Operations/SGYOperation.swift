@@ -8,16 +8,16 @@
 
 import UIKit
 
-class SGYOperation: NSOperation {
+public class SGYOperation: NSOperation {
     
     // MARK: - Initialization
     
-    override init() {
+    public override init() {
         self.logger = Logger(contextDescription: NSStringFromClass(self.dynamicType))
         super.init()
     }
     
     // MARK: - Properties
     
-    var logger: Logger
+    public var logger: Logger
 }
