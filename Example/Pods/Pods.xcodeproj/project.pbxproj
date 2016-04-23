@@ -67,7 +67,7 @@
 		C150157922BAEB1F93635508FB59E618 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E351727CD07BB90B2A3CAE2C2433F6C5 /* Foundation.framework */; };
 		C2F8D1B0A2C41DE62BBCC0D642AF0F24 /* Quick.h in Headers */ = {isa = PBXBuildFile; fileRef = D4E0D7E2D11371A45CB3D1221E7B4EC2 /* Quick.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C4B974611CCBF95800880A60 /* SGYOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B974601CCBF95800880A60 /* SGYOperation.swift */; };
-		C4B974631CCBF97400880A60 /* ConcurrentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B974621CCBF97400880A60 /* ConcurrentOperation.swift */; };
+		C4B974631CCBF97400880A60 /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B974621CCBF97400880A60 /* AsyncOperation.swift */; };
 		C4B974651CCBF9D300880A60 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B974641CCBF9D300880A60 /* Logger.swift */; };
 		C4C0B0CE1C6F9E5A00CA9E8B /* CollectionTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C0B0CD1C6F9E5A00CA9E8B /* CollectionTypeExtension.swift */; };
 		C4C0B0E81C6FA5CC00CA9E8B /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C0B0E11C6FA5CC00CA9E8B /* NSDateExtension.swift */; };
@@ -213,7 +213,7 @@
 		C03BB6589A73F51F073DF050F55D7F41 /* BeGreaterThanOrEqualTo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeGreaterThanOrEqualTo.swift; path = Nimble/Matchers/BeGreaterThanOrEqualTo.swift; sourceTree = "<group>"; };
 		C0EB9EBB245831DEEBE555E731BFBF81 /* Pods-SGYSwiftUtility_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SGYSwiftUtility_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C4B974601CCBF95800880A60 /* SGYOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SGYOperation.swift; path = Operations/SGYOperation.swift; sourceTree = "<group>"; };
-		C4B974621CCBF97400880A60 /* ConcurrentOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConcurrentOperation.swift; path = Operations/ConcurrentOperation.swift; sourceTree = "<group>"; };
+		C4B974621CCBF97400880A60 /* AsyncOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AsyncOperation.swift; path = Operations/AsyncOperation.swift; sourceTree = "<group>"; };
 		C4B974641CCBF9D300880A60 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		C4C0B0CD1C6F9E5A00CA9E8B /* CollectionTypeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionTypeExtension.swift; sourceTree = "<group>"; };
 		C4C0B0E11C6FA5CC00CA9E8B /* NSDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtension.swift; sourceTree = "<group>"; };
@@ -473,7 +473,7 @@
 		C4B9745F1CCBF91900880A60 /* Operations */ = {
 			isa = PBXGroup;
 			children = (
-				C4B974621CCBF97400880A60 /* ConcurrentOperation.swift */,
+				C4B974621CCBF97400880A60 /* AsyncOperation.swift */,
 				C4B974601CCBF95800880A60 /* SGYOperation.swift */,
 			);
 			name = Operations;
@@ -765,7 +765,7 @@
 			files = (
 				CAAED5FB81DB035A9EC080917C783FA6 /* AdapterProtocols.swift in Sources */,
 				D429691F39B4C30A8993360FB8A3E334 /* AllPass.swift in Sources */,
-				C4B974631CCBF97400880A60 /* ConcurrentOperation.swift in Sources */,
+				C4B974631CCBF97400880A60 /* AsyncOperation.swift in Sources */,
 				33514FEE6EA65605EFB6F1801834B692 /* AssertionDispatcher.swift in Sources */,
 				E6E7B15FAD6C56681511813DB2666478 /* AssertionRecorder.swift in Sources */,
 				0A6E71555F55082003A3DB2B03CA85D2 /* AsyncMatcherWrapper.swift in Sources */,
