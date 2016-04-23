@@ -15,32 +15,33 @@ import Foundation
  - Warning: A warning log.  Denotes an issue that can be recovered from, but should be noted as it is likely not functioning properly.
  - Error: An error log.  Denotes a crtitical error that may or may not be recovered from and should be addressed immediately.
  */
-enum LogLevel: String, CustomStringConvertible {
+public enum LogLevel: String, CustomStringConvertible {
     case Debug = "Debug",
     Info = "Info",
     Warning = "Warning",
     Error = "Error"
     
-    var description: String { return rawValue }
+    public var description: String { return rawValue }
 }
 
-enum LogFormatPlaceholder: String, CustomStringConvertible {
+public enum LogFormatPlaceholder: String, CustomStringConvertible {
     case ContextDescription = "$context",
     Level = "$logLevel",
     Value = "$logValue"
     
-    var description: String { return rawValue }
+    public var description: String { return rawValue }
 }
 
-typealias LoggingBlock = (String) -> Void
+public typealias LoggingBlock = (String) -> Void
 
+// Defaults
 private let defaultLogFormat = "[\(LogFormatPlaceholder.ContextDescription)] \(LogFormatPlaceholder.Level) - \(LogFormatPlaceholder.Value)"
 private let defaultLogBlock: LoggingBlock = { NSLog($0) }
 
 /**
  *  Provides a logging interface with a predefined structure.
  */
-class Logger {
+public class Logger {
     
     // MARK: - Initialization
     
@@ -51,17 +52,17 @@ class Logger {
      
      :returns: An instance of the SerialLogger class.
      */
-    convenience init(contextDescription: String) {
+    public convenience init(contextDescription: String) {
         // Use default log format
         self.init(contextDescription: contextDescription, logFormat: defaultLogFormat, logBlock: defaultLogBlock)
     }
     
-    convenience init(contextDescription: String, logBlock: LoggingBlock) {
+    public convenience init(contextDescription: String, logBlock: LoggingBlock) {
         // Use default log format
         self.init(contextDescription: contextDescription, logFormat: defaultLogFormat, logBlock: logBlock)
     }
     
-    init(contextDescription: String, logFormat: String, logBlock: LoggingBlock) {
+    public init(contextDescription: String, logFormat: String, logBlock: LoggingBlock) {
         self.logFormat = logFormat
         self.contextDescription = contextDescription
         self.logBlock = logBlock
@@ -70,9 +71,9 @@ class Logger {
     // MARK: - Properties
     
     /// The description prefixed to logs.  Assigned on initialization.
-    let contextDescription: String
+    public let contextDescription: String
     /// The format used to create the final logging string.
-    let logFormat: String
+    public let logFormat: String
     /// The block used to perform actual logging action.
     private let logBlock: LoggingBlock
     
@@ -84,7 +85,7 @@ class Logger {
      :param: description The text to log.
      :param: level       The log level to display.
      */
-    func log(description: String, level: LogLevel = .Debug) {
+    public func log(description: String, level: LogLevel = .Debug) {
         
         // Create log description by replacing placeholders w/ their respective values
         var log = logFormat.stringByReplacingOccurrencesOfString(LogFormatPlaceholder.ContextDescription.rawValue, withString: contextDescription)
@@ -100,19 +101,19 @@ class Logger {
 
 extension Logger {
     
-    func logDebug(value: String) {
+    public func logDebug(value: String) {
         log(value, level: .Debug)
     }
     
-    func logInfo(value: String) {
+    public func logInfo(value: String) {
         log(value, level: .Info)
     }
     
-    func logWarning(value: String) {
+    public func logWarning(value: String) {
         log(value, level: .Warning)
     }
     
-    func logError(value: String) {
+    public func logError(value: String) {
         log(value, level: .Error)
     }
 }
@@ -121,19 +122,19 @@ extension Logger {
 
 extension Logger {
     
-    func logDebug(@autoclosure value: () -> CustomStringConvertible) {
+    public func logDebug(@autoclosure value: () -> CustomStringConvertible) {
         log(.Debug, value: value)
     }
     
-    func logInfo(@autoclosure value: () -> CustomStringConvertible) {
+    public func logInfo(@autoclosure value: () -> CustomStringConvertible) {
         log(.Info, value: value)
     }
     
-    func logWarning(@autoclosure value: () -> CustomStringConvertible) {
+    public func logWarning(@autoclosure value: () -> CustomStringConvertible) {
         log(.Warning, value: value)
     }
     
-    func logError(@autoclosure value: () -> CustomStringConvertible) {
+    public func logError(@autoclosure value: () -> CustomStringConvertible) {
         log(.Error, value: value)
     }
     

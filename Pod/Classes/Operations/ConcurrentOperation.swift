@@ -6,16 +6,16 @@
 
 import Foundation
 
-class ConcurrentOperation: SGYOperation {
+public class ConcurrentOperation: SGYOperation {
     
     // MARK: Required NSOperation properties to support concurrent execution
     // NOTE: 'isExecuting' and 'isFinished' key-value notifications are required so ObjC classes can observe properties.
     
     // Indicates we do not finish when 'main' exits.  Does not matter when used in an NSOperationQueue (as this generally will be), but this declaration ensures this operation works as intended outside a queue.
-    override var asynchronous: Bool { return true }
+    public override var asynchronous: Bool { return true }
     
     private var _executing: Bool = false
-    override var executing: Bool {
+    public override var executing: Bool {
         get { return _executing }
         
         set {
@@ -28,7 +28,7 @@ class ConcurrentOperation: SGYOperation {
     }
     
     private var _finished: Bool = false
-    override var finished: Bool {
+    public override var finished: Bool {
         get { return _finished }
         
         set {
@@ -42,7 +42,7 @@ class ConcurrentOperation: SGYOperation {
     
     // MARK: Methods
     
-    override func start() {
+    public override func start() {
         // CANCEL CHECK
         guard !cancelled else {
             endExecution()
@@ -56,7 +56,7 @@ class ConcurrentOperation: SGYOperation {
     }
     
     // Required properties to set in order to indicate completion of operation
-    func endExecution() {
+    public func endExecution() {
         executing = false
         finished = true
     }
