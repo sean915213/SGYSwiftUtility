@@ -71,7 +71,7 @@ public class Logger {
     // MARK: - Properties
     
     /// The description prefixed to logs.  Assigned on initialization.
-    public let contextDescription: String
+    public var contextDescription: String
     /// The format used to create the final logging string.
     public let logFormat: String
     /// The block used to perform actual logging action.
