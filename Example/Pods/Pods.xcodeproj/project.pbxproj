@@ -70,7 +70,6 @@
 		C4B974631CCBF97400880A60 /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B974621CCBF97400880A60 /* AsyncOperation.swift */; };
 		C4B974651CCBF9D300880A60 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B974641CCBF9D300880A60 /* Logger.swift */; };
 		C4C0B0CE1C6F9E5A00CA9E8B /* CollectionTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C0B0CD1C6F9E5A00CA9E8B /* CollectionTypeExtension.swift */; };
-		C4C0B0E81C6FA5CC00CA9E8B /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C0B0E11C6FA5CC00CA9E8B /* NSDateExtension.swift */; };
 		C4C0B0E91C6FA5CC00CA9E8B /* NSLayoutConstraintExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C0B0E21C6FA5CC00CA9E8B /* NSLayoutConstraintExtension.swift */; };
 		C4C0B0EA1C6FA5CC00CA9E8B /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C0B0E31C6FA5CC00CA9E8B /* StringExtension.swift */; };
 		C4C0B0EB1C6FA5CC00CA9E8B /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C0B0E41C6FA5CC00CA9E8B /* UICollectionViewExtension.swift */; };
@@ -216,7 +215,6 @@
 		C4B974621CCBF97400880A60 /* AsyncOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AsyncOperation.swift; path = Operations/AsyncOperation.swift; sourceTree = "<group>"; };
 		C4B974641CCBF9D300880A60 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		C4C0B0CD1C6F9E5A00CA9E8B /* CollectionTypeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionTypeExtension.swift; sourceTree = "<group>"; };
-		C4C0B0E11C6FA5CC00CA9E8B /* NSDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtension.swift; sourceTree = "<group>"; };
 		C4C0B0E21C6FA5CC00CA9E8B /* NSLayoutConstraintExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraintExtension.swift; sourceTree = "<group>"; };
 		C4C0B0E31C6FA5CC00CA9E8B /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		C4C0B0E41C6FA5CC00CA9E8B /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
@@ -483,7 +481,6 @@
 			isa = PBXGroup;
 			children = (
 				C4B9745F1CCBF91900880A60 /* Operations */,
-				C4C0B0E11C6FA5CC00CA9E8B /* NSDateExtension.swift */,
 				C4C0B0E21C6FA5CC00CA9E8B /* NSLayoutConstraintExtension.swift */,
 				C4C0B0E31C6FA5CC00CA9E8B /* StringExtension.swift */,
 				C4C0B0E41C6FA5CC00CA9E8B /* UICollectionViewExtension.swift */,
@@ -772,7 +769,6 @@
 				77128C0365A98E3BAC038A915B38791C /* BeAKindOf.swift in Sources */,
 				7A6E2730A25A55D8DFA74D3D7CB005EF /* BeAnInstanceOf.swift in Sources */,
 				B905718B2501DDA22F2AE73CB6E76E6B /* BeCloseTo.swift in Sources */,
-				C4C0B0E81C6FA5CC00CA9E8B /* NSDateExtension.swift in Sources */,
 				9E7786C034F0E0A6B5F0A0E6BE7D7E4A /* BeEmpty.swift in Sources */,
 				9646787942A85613FE77F45794E9B5CD /* BeginWith.swift in Sources */,
 				C4C0B0EC1C6FA5CC00CA9E8B /* UIColorExtension.swift in Sources */,
