@@ -21,7 +21,7 @@ extension UITableView {
         // This version can return nil so make sure it returns a cell before force-casting
         guard let cell = dequeueReusableCellWithIdentifier(identifier) else { return nil }
         // Force cast
-        return (cell as! T)
+        return cell as! T
     }
     
     /**
@@ -47,6 +47,6 @@ extension UITableView {
         // Check view can be returned before force casting
         guard let view = dequeueReusableHeaderFooterViewWithIdentifier(identifier) else { return nil }
         // Force cast
-        return (view as! T)
+        return view as! T
     }
 }
