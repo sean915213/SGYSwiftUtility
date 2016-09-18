@@ -1,0 +1,6 @@
+use_frameworks!
+target 'SGYSwiftUtility_Tests' do
+  pod 'SGYSwiftUtility', :path => '../'
+  
+  
+end

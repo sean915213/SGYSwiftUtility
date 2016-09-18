@@ -1,0 +1,16 @@
+PODS:
+  - SGYSwiftUtility (0.1.0)
+
+DEPENDENCIES:
+  - SGYSwiftUtility (from `../`)
+
+EXTERNAL SOURCES:
+  SGYSwiftUtility:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SGYSwiftUtility: 341e02b4808273e7966e11a1fda0180dbabe52b1
+
+PODFILE CHECKSUM: b2b60ae456fcd2924806691e513b14bdbb5e924c
+
+COCOAPODS: 1.1.0.rc.2
