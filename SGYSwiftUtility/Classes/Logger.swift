@@ -10,8 +10,8 @@ import Foundation
 public typealias LoggingBlock = (String) -> Void
 
 // Defaults
-private let defaultLogFormat = "[\(Logger.FormatPlaceholder.sourceName)] \(Logger.FormatPlaceholder.level) - \(Logger.FormatPlaceholder.value)"
-private let defaultLogBlock: LoggingBlock = { NSLog($0) }
+fileprivate let defaultLogFormat = "[\(Logger.FormatPlaceholder.sourceName)] \(Logger.FormatPlaceholder.level) - \(Logger.FormatPlaceholder.value)"
+fileprivate let defaultLogBlock: LoggingBlock = { NSLog($0) }
 
 /**
  *  Provides a logging interface with a predefined structure.
@@ -78,7 +78,7 @@ public class Logger {
     /// The format used to create the final logging string.
     public let logFormat: String
     /// The block used to perform actual logging action.
-    private let logBlock: LoggingBlock
+    fileprivate let logBlock: LoggingBlock
     
     // MARK: - Methods
     
@@ -120,33 +120,3 @@ extension Logger {
         log(value, level: .error)
     }
 }
-
-// MARK: CustomStringConvertible Extension
-
-/**
-extension Logger {
-    
-    public func logDebug(_ value: @autoclosure () -> CustomStringConvertible) {
-        log(.debug, value: value)
-    }
-    
-    public func logInfo(_ value: @autoclosure () -> CustomStringConvertible) {
-        log(.info, value: value)
-    }
-    
-    public func logWarning(_ value: @autoclosure () -> CustomStringConvertible) {
-        log(.warning, value: value)
-    }
-    
-    public func logError(_ value: @autoclosure () -> CustomStringConvertible) {
-        log(.error, value: value)
-    }
-    
-    private func log(_ level: Level, value: @autoclosure () -> CustomStringConvertible) {
-        // Value block execution could be non-trivial, so don't even bother if not debugging
-        #if DEBUG
-            log(value().description, level: level)
-        #endif
-    }
-}
-**/
