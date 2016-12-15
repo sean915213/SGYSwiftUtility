@@ -8,23 +8,6 @@
 
 import Foundation
 
-extension Collection {
-    
-    /**
-     Returns the first value passing the test represented by `predicate`.
-     
-     - parameter predicate: A function that returns `Bool` to indicate whether the test is passed or not.
-     
-     - throws: Rethrows any errors encountered executing `predicate`.
-     
-     - returns: The first value passing the test `predicate` or `nil` if no such object is found.
-     */
-    public func find(predicate: (Iterator.Element) throws -> Bool) rethrows -> Iterator.Element? {
-        guard let index = try index(where: predicate) else { return nil }
-        return self[index]
-    }
-}
-
 extension Array {
     
     /**
