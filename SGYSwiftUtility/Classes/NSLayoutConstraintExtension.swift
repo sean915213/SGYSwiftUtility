@@ -112,3 +112,11 @@ extension NSLayoutConstraint {
         return NSLayoutConstraint.constraints(withVisualFormat: layoutString, options: NSLayoutFormatOptions(), metrics: layoutMetrics, views: layoutViews)
     }
 }
+
+extension Array where Element: NSLayoutConstraint {
+    /// Activates an array of `NSLayoutConstraint` objects.
+    func activate() { NSLayoutConstraint.activate(self) }
+    /// Deactivates an array of `NSLayoutConstraint` objects.
+    func deactivate() { NSLayoutConstraint.deactivate(self) }
+}
+

@@ -37,6 +37,7 @@ public class Logger {
         public var description: String { return rawValue }
     }
     
+    
     public enum FormatPlaceholder: String, CustomStringConvertible {
         case sourceName = "$context",
         level = "$logLevel",
