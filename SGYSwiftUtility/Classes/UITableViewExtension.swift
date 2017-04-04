@@ -26,6 +26,6 @@ extension UITableView {
         // Check view can be returned before force casting
         guard let view = dequeueReusableHeaderFooterView(withIdentifier: identifier) else { return nil }
         // Force cast
-        return view as! T
+        return (view as! T)
     }
 }
