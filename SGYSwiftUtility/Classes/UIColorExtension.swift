@@ -19,7 +19,7 @@ extension UIColor {
      - returns: An initialized `UIColor` instance or `nil` if the hexadecimal string could not be parsed into RGB values.
      */
     public convenience init?(hexString: String) {
-        precondition(!hexString.isEmpty && hexString[hexString.startIndex] == "#", "Hex strings must not be empty and must begin with '#'.")
+        precondition(!hexString.isEmpty && hexString.first == "#", "Hex strings must not be empty and must begin with '#'.")
         
         let scanner = Scanner(string: hexString)
         // Bypass '#' char

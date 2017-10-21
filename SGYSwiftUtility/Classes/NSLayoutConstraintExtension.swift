@@ -20,7 +20,7 @@ extension NSLayoutConstraint {
     public class func constraintsPinningView(_ view: UIView, toMargins: Bool = false) -> [NSLayoutConstraint] {
         if toMargins {
             let hConstraints = constraintsPinningView(view, axis: .horizontal, toMargins: toMargins)
-            let vConstraints = constraintsPinningView(view, axis: .horizontal, toMargins: toMargins)
+            let vConstraints = constraintsPinningView(view, axis: .vertical, toMargins: toMargins)
             return hConstraints + vConstraints
         } else {
             return constraintsPinningView(view, insets: UIEdgeInsets.zero)

@@ -10,7 +10,7 @@ private let sanitizedCharacters = ["/", " "]
 
 extension Data {
     
-    public init?(hexadecimalEncodedString string: String) {
+    public init?(hexString string: String) {
         // Make sure this string CAN be converted (ie. has even number of characters)
         guard !string.isEmpty && string.lengthOfBytes(using: String.Encoding.utf8) % 2 == 0 else { return nil }
         // Array to store bytes
@@ -18,17 +18,13 @@ extension Data {
         // Grab the bytes from the string in 2 character chunks
         var index = string.startIndex
         repeat {
-            let stringRange = index..<string.index(index, offsetBy: 2)
-            let byteString = string.substring(with: stringRange)
+            let byteString = string[index..<string.index(index, offsetBy: 2)]
             // Convert to UInt8 representation of the C string
             let num = UInt8(byteString.withCString { strtoul($0, nil, 16) })
-            
             // Append to array
             byteArray.append(num)
-            
             // Increment index by 2 spaces
             index = string.index(index, offsetBy: 2)
-            
         } while index < string.endIndex
         // Initialize
         self.init(bytes: byteArray)
@@ -56,13 +52,11 @@ extension Data {
         }
     }
     
-    public func hexadecimalEncodedString() -> String? {
+    public func hexString() -> String? {
         guard count > 0 else { return nil }
         var hexString = String()
         // Append to string
-        for byte in self {
-            hexString += String(format: "%02x", UInt(byte))
-        }
+        for byte in self { hexString += String(format: "%02x", UInt(byte)) }
         return hexString
     }
 }

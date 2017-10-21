@@ -49,7 +49,6 @@ open class AsyncOperation: SGYOperation {
             endExecution()
             return
         }
-        
         // Toggle executing
         isExecuting = true
         // Run main
