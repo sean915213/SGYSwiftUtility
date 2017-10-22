@@ -115,8 +115,8 @@ extension NSLayoutConstraint {
 
 extension Array where Element: NSLayoutConstraint {
     /// Activates an array of `NSLayoutConstraint` objects.
-    func activate() { NSLayoutConstraint.activate(self) }
+    public func activate() { NSLayoutConstraint.activate(self) }
     /// Deactivates an array of `NSLayoutConstraint` objects.
-    func deactivate() { NSLayoutConstraint.deactivate(self) }
+    public func deactivate() { NSLayoutConstraint.deactivate(self) }
 }
 
