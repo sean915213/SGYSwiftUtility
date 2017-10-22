@@ -18,7 +18,7 @@ extension UICollectionView {
      
      - returns: A dequeued `UICollectionViewCell` cast to type `T`.
      */
-    public func dequeueReusableCellWithReuseIdentifier<T: UICollectionViewCell>(_ identifier: String, forIndexPath indexPath: IndexPath) -> T {
+    public func dequeueReusableCell<T: UICollectionViewCell>(withReuseIdentifier identifier: String, for indexPath: IndexPath) -> T {
         return dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! T
     }
     
@@ -31,7 +31,7 @@ extension UICollectionView {
      
      - returns: A dequeued `UICollectionReusableView` cast to type `T`.
      */
-    public func dequeueReusableSupplementaryViewOfKind<T: UICollectionReusableView>(_ elementKind: String, withReuseIdentifier reuseIdentifier: String, forIndexPath indexPath: IndexPath) -> T {
+    public func dequeueReusableSupplementaryView<T: UICollectionReusableView>(ofKind elementKind: String, withReuseIdentifier reuseIdentifier: String, for indexPath: IndexPath) -> T {
         return dequeueReusableSupplementaryView(ofKind: elementKind, withReuseIdentifier: reuseIdentifier, for: indexPath) as! T
     }
 }
