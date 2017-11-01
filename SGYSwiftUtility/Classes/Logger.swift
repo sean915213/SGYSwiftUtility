@@ -10,7 +10,7 @@ import Foundation
 public typealias LoggingBlock = (String) -> Void
 
 // Defaults
-fileprivate let defaultLogFormat = "[\(Logger.FormatPlaceholder.sourceName)] \(Logger.FormatPlaceholder.level) - \(Logger.FormatPlaceholder.value)"
+fileprivate let defaultLogFormat = "[\(Logger.FormatPlaceholder.sourceName.rawValue)] \(Logger.FormatPlaceholder.level.rawValue) - \(Logger.FormatPlaceholder.value.rawValue)"
 fileprivate let defaultLogBlock: LoggingBlock = { NSLog($0) }
 
 /**
