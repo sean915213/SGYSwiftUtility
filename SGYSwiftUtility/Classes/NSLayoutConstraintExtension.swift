@@ -122,6 +122,11 @@ extension Sequence where Element: NSLayoutConstraint {
     public func deactivate() {
         forEach { $0.isActive = false }
     }
+    /// Sets the priority of each `NSLayoutConstraint` object and returns the sequence.
+    public func withPriority(_ priority: UILayoutPriority) -> Self {
+        setPriority(priority)
+        return self
+    }
     /// Sets the priority of each `NSLayoutConstraint` object.
     public func setPriority(_ priority: UILayoutPriority) {
         forEach { $0.priority = priority }
