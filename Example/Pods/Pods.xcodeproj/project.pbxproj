@@ -12,7 +12,7 @@
 		54D35E8451284E0ED7B4B4CEFCF2443F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		7483E2871FBA3B8200D1BC58 /* URLComponentsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7483E2861FBA3B8200D1BC58 /* URLComponentsExtension.swift */; };
 		A79F21C022D34567D0A6D6645ED976C0 /* SGYSwiftUtility-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0589D86881C537CC0D42696C70505297 /* SGYSwiftUtility-dummy.m */; };
-		C434AAB41D8F2BE500732D3D /* CollectionTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C434AAA71D8F2BE500732D3D /* CollectionTypeExtension.swift */; };
+		C434AAB41D8F2BE500732D3D /* SequenceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C434AAA71D8F2BE500732D3D /* SequenceExtension.swift */; };
 		C434AAB51D8F2BE500732D3D /* DataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C434AAA81D8F2BE500732D3D /* DataExtension.swift */; };
 		C434AAB61D8F2BE500732D3D /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C434AAA91D8F2BE500732D3D /* Logger.swift */; };
 		C434AAB71D8F2BE500732D3D /* NSLayoutConstraintExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C434AAAA1D8F2BE500732D3D /* NSLayoutConstraintExtension.swift */; };
@@ -57,7 +57,7 @@
 		96EB82B8EBC180B866BCB6CAEA32E2FB /* Pods-SGYSwiftUtility_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SGYSwiftUtility_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		B9E571CAB5452071C0DA600ED7B888BF /* Pods-SGYSwiftUtility_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SGYSwiftUtility_Tests-dummy.m"; sourceTree = "<group>"; };
 		C0EB9EBB245831DEEBE555E731BFBF81 /* Pods-SGYSwiftUtility_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SGYSwiftUtility_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		C434AAA71D8F2BE500732D3D /* CollectionTypeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionTypeExtension.swift; sourceTree = "<group>"; };
+		C434AAA71D8F2BE500732D3D /* SequenceExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequenceExtension.swift; sourceTree = "<group>"; };
 		C434AAA81D8F2BE500732D3D /* DataExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataExtension.swift; sourceTree = "<group>"; };
 		C434AAA91D8F2BE500732D3D /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		C434AAAA1D8F2BE500732D3D /* NSLayoutConstraintExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraintExtension.swift; sourceTree = "<group>"; };
@@ -164,7 +164,7 @@
 		9B2ED305F27D14A4BF58C615C67B12C0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				C434AAA71D8F2BE500732D3D /* CollectionTypeExtension.swift */,
+				C434AAA71D8F2BE500732D3D /* SequenceExtension.swift */,
 				C434AAA81D8F2BE500732D3D /* DataExtension.swift */,
 				C434AAA91D8F2BE500732D3D /* Logger.swift */,
 				C434AAAA1D8F2BE500732D3D /* NSLayoutConstraintExtension.swift */,
@@ -338,7 +338,7 @@
 				C434AAB51D8F2BE500732D3D /* DataExtension.swift in Sources */,
 				C434AABE1D8F2BE500732D3D /* UITableViewExtension.swift in Sources */,
 				C434AAB91D8F2BE500732D3D /* NSUserDefaultsExtension.swift in Sources */,
-				C434AAB41D8F2BE500732D3D /* CollectionTypeExtension.swift in Sources */,
+				C434AAB41D8F2BE500732D3D /* SequenceExtension.swift in Sources */,
 				C434AABA1D8F2BE500732D3D /* AsyncOperation.swift in Sources */,
 				A79F21C022D34567D0A6D6645ED976C0 /* SGYSwiftUtility-dummy.m in Sources */,
 				C434AABB1D8F2BE500732D3D /* SGYOperation.swift in Sources */,
