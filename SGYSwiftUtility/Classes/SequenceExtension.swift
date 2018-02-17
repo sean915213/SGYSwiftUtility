@@ -16,6 +16,6 @@ extension Sequence {
     }
     
     public mutating func sort<Value>(by keyPath: KeyPath<Element, Value>, ascending: Bool = true) where Value: Comparable {
-        self = sorted(by: keyPath, ascending: ascending)
+        self = sorted(by: keyPath, ascending: ascending) as! Self
     }
 }
