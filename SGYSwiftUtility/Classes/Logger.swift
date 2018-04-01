@@ -35,13 +35,11 @@ public class Logger {
         error = "Error"
     }
     
-    
     public enum FormatPlaceholder: String {
         case sourceName = "$context",
         level = "$logLevel",
         value = "$logValue"
     }
-    
     
     // MARK: - Initialization
     
@@ -113,5 +111,34 @@ extension Logger {
     
     public func logError(_ value: String) {
         log(value, level: .error)
+    }
+}
+
+// MARK: Type Source Extensions
+
+extension Logger {
+    
+    class func log(_ description: String, from source: Any.Type, level: Logger.Level) {
+        Logger(source: source).log(description, level: level)
+    }
+    
+    class func logDebug(_ description: String, from source: Any.Type) {
+        log(description, from: source, level: .debug)
+    }
+    
+    class func logInfo(_ description: String, from source: Any.Type) {
+        log(description, from: source, level: .info)
+    }
+    
+    class func logWarning(_ description: String, from source: Any.Type) {
+        log(description, from: source, level: .warning)
+    }
+    
+    class func logError(_ description: String, from source: Any.Type) {
+        log(description, from: source, level: .error)
+    }
+    
+    convenience init(source: Any.Type) {
+        self.init(source: String(describing: source))
     }
 }
