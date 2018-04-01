@@ -118,27 +118,27 @@ extension Logger {
 
 extension Logger {
     
-    class func log(_ description: String, from source: Any.Type, level: Logger.Level) {
+    public class func log(_ description: String, from source: Any.Type, level: Logger.Level) {
         Logger(source: source).log(description, level: level)
     }
     
-    class func logDebug(_ description: String, from source: Any.Type) {
+    public class func logDebug(_ description: String, from source: Any.Type) {
         log(description, from: source, level: .debug)
     }
     
-    class func logInfo(_ description: String, from source: Any.Type) {
+    public class func logInfo(_ description: String, from source: Any.Type) {
         log(description, from: source, level: .info)
     }
     
-    class func logWarning(_ description: String, from source: Any.Type) {
+    public class func logWarning(_ description: String, from source: Any.Type) {
         log(description, from: source, level: .warning)
     }
     
-    class func logError(_ description: String, from source: Any.Type) {
+    public class func logError(_ description: String, from source: Any.Type) {
         log(description, from: source, level: .error)
     }
     
-    convenience init(source: Any.Type) {
+    public convenience init(source: Any.Type) {
         self.init(source: String(describing: source))
     }
 }
