@@ -85,7 +85,7 @@ extension NSLayoutConstraint {
             let prefixString = axis == .horizontal ? "H:" : "V:"
             let layoutString = prefixString + "|-[view]-|"
             
-            return NSLayoutConstraint.constraints(withVisualFormat: layoutString, options: NSLayoutFormatOptions(), metrics: nil, views: ["view" : view])
+            return NSLayoutConstraint.constraints(withVisualFormat: layoutString, options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["view" : view])
         } else {
             return constraintsPinningView(view, axis: axis, leadMargin: 0, trailingMargin: 0)
         }
@@ -109,7 +109,7 @@ extension NSLayoutConstraint {
         let prefixString = axis == .horizontal ? "H:" : "V:"
         let layoutString = prefixString + "|-lead-[view]-trailing-|"
         
-        return NSLayoutConstraint.constraints(withVisualFormat: layoutString, options: NSLayoutFormatOptions(), metrics: layoutMetrics, views: layoutViews)
+        return NSLayoutConstraint.constraints(withVisualFormat: layoutString, options: NSLayoutConstraint.FormatOptions(), metrics: layoutMetrics, views: layoutViews)
     }
 }
 
