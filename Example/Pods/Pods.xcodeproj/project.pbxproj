@@ -10,6 +10,9 @@
 		2252E66E1CC0B9C308A66E52086730E2 /* Pods-SGYSwiftUtility_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E571CAB5452071C0DA600ED7B888BF /* Pods-SGYSwiftUtility_Tests-dummy.m */; };
 		4CAE059EFC11A0181C03516D0C39D675 /* Pods-SGYSwiftUtility_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9379D47E9E24AA43C7B3A4A726D02E95 /* Pods-SGYSwiftUtility_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54D35E8451284E0ED7B4B4CEFCF2443F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		742B69A320CB35C000EA5F2E /* CLAuthorizationStatusExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B69A220CB35C000EA5F2E /* CLAuthorizationStatusExtension.swift */; };
+		745BD45020CB368600AFE76C /* SingleValueCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745BD44F20CB368600AFE76C /* SingleValueCodable.swift */; };
+		745BD45220CB370200AFE76C /* CodableURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745BD45120CB370200AFE76C /* CodableURL.swift */; };
 		7483E2871FBA3B8200D1BC58 /* URLComponentsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7483E2861FBA3B8200D1BC58 /* URLComponentsExtension.swift */; };
 		A79F21C022D34567D0A6D6645ED976C0 /* SGYSwiftUtility-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0589D86881C537CC0D42696C70505297 /* SGYSwiftUtility-dummy.m */; };
 		C434AAB41D8F2BE500732D3D /* SequenceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C434AAA71D8F2BE500732D3D /* SequenceExtension.swift */; };
@@ -50,6 +53,9 @@
 		6C727F60DFEFF80637DF9B633A4DE0DF /* Pods-SGYSwiftUtility_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SGYSwiftUtility_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		703BAB9E6F0F5FC34711470B0A02CDC3 /* Pods-SGYSwiftUtility_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SGYSwiftUtility_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		70C9832A91E1192421F4073D6DA818FC /* SGYSwiftUtility.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SGYSwiftUtility.modulemap; sourceTree = "<group>"; };
+		742B69A220CB35C000EA5F2E /* CLAuthorizationStatusExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLAuthorizationStatusExtension.swift; sourceTree = "<group>"; };
+		745BD44F20CB368600AFE76C /* SingleValueCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleValueCodable.swift; sourceTree = "<group>"; };
+		745BD45120CB370200AFE76C /* CodableURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableURL.swift; sourceTree = "<group>"; };
 		7483E2861FBA3B8200D1BC58 /* URLComponentsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLComponentsExtension.swift; sourceTree = "<group>"; };
 		9211BCDD3777E02438AC9E11B4DB6F1A /* Pods-SGYSwiftUtility_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SGYSwiftUtility_Tests-resources.sh"; sourceTree = "<group>"; };
 		9379D47E9E24AA43C7B3A4A726D02E95 /* Pods-SGYSwiftUtility_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SGYSwiftUtility_Tests-umbrella.h"; sourceTree = "<group>"; };
@@ -150,6 +156,15 @@
 			path = "Target Support Files/Pods-SGYSwiftUtility_Tests";
 			sourceTree = "<group>";
 		};
+		745BD44E20CB364E00AFE76C /* Codable */ = {
+			isa = PBXGroup;
+			children = (
+				745BD44F20CB368600AFE76C /* SingleValueCodable.swift */,
+				745BD45120CB370200AFE76C /* CodableURL.swift */,
+			);
+			path = Codable;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +179,7 @@
 		9B2ED305F27D14A4BF58C615C67B12C0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				745BD44E20CB364E00AFE76C /* Codable */,
 				C434AAA71D8F2BE500732D3D /* SequenceExtension.swift */,
 				C434AAA81D8F2BE500732D3D /* DataExtension.swift */,
 				C434AAA91D8F2BE500732D3D /* Logger.swift */,
@@ -176,6 +192,7 @@
 				C434AAB21D8F2BE500732D3D /* UITableViewExtension.swift */,
 				C434AAB31D8F2BE500732D3D /* UIViewExtension.swift */,
 				7483E2861FBA3B8200D1BC58 /* URLComponentsExtension.swift */,
+				742B69A220CB35C000EA5F2E /* CLAuthorizationStatusExtension.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -291,10 +308,10 @@
 				LastUpgradeCheck = 0700;
 				TargetAttributes = {
 					83F539B37E5B9086467DCA517ADC5B70 = {
-						LastSwiftMigration = 0910;
+						LastSwiftMigration = "";
 					};
 					FE23F22BF2C094D4C3B44E7E4643585A = {
-						LastSwiftMigration = 0910;
+						LastSwiftMigration = "";
 					};
 				};
 			};
@@ -338,8 +355,11 @@
 				C434AAB51D8F2BE500732D3D /* DataExtension.swift in Sources */,
 				C434AABE1D8F2BE500732D3D /* UITableViewExtension.swift in Sources */,
 				C434AAB91D8F2BE500732D3D /* NSUserDefaultsExtension.swift in Sources */,
+				745BD45220CB370200AFE76C /* CodableURL.swift in Sources */,
+				742B69A320CB35C000EA5F2E /* CLAuthorizationStatusExtension.swift in Sources */,
 				C434AAB41D8F2BE500732D3D /* SequenceExtension.swift in Sources */,
 				C434AABA1D8F2BE500732D3D /* AsyncOperation.swift in Sources */,
+				745BD45020CB368600AFE76C /* SingleValueCodable.swift in Sources */,
 				A79F21C022D34567D0A6D6645ED976C0 /* SGYSwiftUtility-dummy.m in Sources */,
 				C434AABB1D8F2BE500732D3D /* SGYOperation.swift in Sources */,
 				C434AABD1D8F2BE500732D3D /* UIColorExtension.swift in Sources */,
