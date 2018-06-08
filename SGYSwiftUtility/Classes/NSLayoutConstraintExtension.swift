@@ -23,7 +23,7 @@ extension NSLayoutConstraint {
             let vConstraints = constraintsPinningView(view, axis: .vertical, toMargins: toMargins)
             return hConstraints + vConstraints
         } else {
-            return constraintsPinningView(view, insets: UIEdgeInsets.zero)
+            return constraintsPinningView(view, insets: UIEdgeInsets())
         }
     }
     
