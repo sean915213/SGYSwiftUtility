@@ -49,7 +49,7 @@ extension NSLayoutConstraint {
      
      - returns: An array of `NSLayoutConstraint` objects pinning `views` along `axis`.
      */
-    public class func constraintsPinningViews(_ views: [UIView], axis: UILayoutConstraintAxis, toMargins: Bool = false) -> [NSLayoutConstraint] {
+    public class func constraintsPinningViews(_ views: [UIView], axis: NSLayoutConstraint.Axis, toMargins: Bool = false) -> [NSLayoutConstraint] {
         if toMargins {
             return views.flatMap { self.constraintsPinningView($0, axis: axis, toMargins: toMargins) }
         } else {
@@ -67,7 +67,7 @@ extension NSLayoutConstraint {
      
      - returns: An array of `NSLayoutConstraint` objects pinning `views` along `axis`.
      */
-    public class func constraintsPinningViews(_ views: [UIView], axis: UILayoutConstraintAxis, leadMargin: CGFloat, trailingMargin: CGFloat) -> [NSLayoutConstraint] {
+    public class func constraintsPinningViews(_ views: [UIView], axis: NSLayoutConstraint.Axis, leadMargin: CGFloat, trailingMargin: CGFloat) -> [NSLayoutConstraint] {
         return views.flatMap { self.constraintsPinningView($0, axis: axis, leadMargin: leadMargin, trailingMargin: trailingMargin) }
     }
     
@@ -79,7 +79,7 @@ extension NSLayoutConstraint {
      
      - returns: An array of `NSLayoutConstraint` objects pinning `view` along `axis`.
      */
-    public class func constraintsPinningView(_ view: UIView, axis: UILayoutConstraintAxis, toMargins: Bool = false) -> [NSLayoutConstraint] {
+    public class func constraintsPinningView(_ view: UIView, axis: NSLayoutConstraint.Axis, toMargins: Bool = false) -> [NSLayoutConstraint] {
         if toMargins {
             
             let prefixString = axis == .horizontal ? "H:" : "V:"
@@ -101,7 +101,7 @@ extension NSLayoutConstraint {
      
      - returns: An array of `NSLayoutConstraint` objects pinning `view` along `axis`.
      */
-    public class func constraintsPinningView(_ view: UIView, axis: UILayoutConstraintAxis, leadMargin: CGFloat, trailingMargin: CGFloat) -> [NSLayoutConstraint] {
+    public class func constraintsPinningView(_ view: UIView, axis: NSLayoutConstraint.Axis, leadMargin: CGFloat, trailingMargin: CGFloat) -> [NSLayoutConstraint] {
         
         let layoutViews = ["view" : view]
         let layoutMetrics = ["lead" : leadMargin, "trailing" : trailingMargin]
