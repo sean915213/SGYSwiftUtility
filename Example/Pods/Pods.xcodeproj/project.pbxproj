@@ -10,6 +10,7 @@
 		2252E66E1CC0B9C308A66E52086730E2 /* Pods-SGYSwiftUtility_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E571CAB5452071C0DA600ED7B888BF /* Pods-SGYSwiftUtility_Tests-dummy.m */; };
 		4CAE059EFC11A0181C03516D0C39D675 /* Pods-SGYSwiftUtility_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9379D47E9E24AA43C7B3A4A726D02E95 /* Pods-SGYSwiftUtility_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54D35E8451284E0ED7B4B4CEFCF2443F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		74227F17211B8ABC00E65621 /* NSEntityDescriptionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74227F16211B8ABC00E65621 /* NSEntityDescriptionExtension.swift */; };
 		742B69A320CB35C000EA5F2E /* CLAuthorizationStatusExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B69A220CB35C000EA5F2E /* CLAuthorizationStatusExtension.swift */; };
 		745BD45020CB368600AFE76C /* SingleValueCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745BD44F20CB368600AFE76C /* SingleValueCodable.swift */; };
 		745BD45220CB370200AFE76C /* CodableURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745BD45120CB370200AFE76C /* CodableURL.swift */; };
@@ -53,6 +54,7 @@
 		6C727F60DFEFF80637DF9B633A4DE0DF /* Pods-SGYSwiftUtility_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SGYSwiftUtility_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		703BAB9E6F0F5FC34711470B0A02CDC3 /* Pods-SGYSwiftUtility_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SGYSwiftUtility_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		70C9832A91E1192421F4073D6DA818FC /* SGYSwiftUtility.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SGYSwiftUtility.modulemap; sourceTree = "<group>"; };
+		74227F16211B8ABC00E65621 /* NSEntityDescriptionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSEntityDescriptionExtension.swift; sourceTree = "<group>"; };
 		742B69A220CB35C000EA5F2E /* CLAuthorizationStatusExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLAuthorizationStatusExtension.swift; sourceTree = "<group>"; };
 		745BD44F20CB368600AFE76C /* SingleValueCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleValueCodable.swift; sourceTree = "<group>"; };
 		745BD45120CB370200AFE76C /* CodableURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableURL.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				C434AAB31D8F2BE500732D3D /* UIViewExtension.swift */,
 				7483E2861FBA3B8200D1BC58 /* URLComponentsExtension.swift */,
 				742B69A220CB35C000EA5F2E /* CLAuthorizationStatusExtension.swift */,
+				74227F16211B8ABC00E65621 /* NSEntityDescriptionExtension.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				C434AABA1D8F2BE500732D3D /* AsyncOperation.swift in Sources */,
 				745BD45020CB368600AFE76C /* SingleValueCodable.swift in Sources */,
 				A79F21C022D34567D0A6D6645ED976C0 /* SGYSwiftUtility-dummy.m in Sources */,
+				74227F17211B8ABC00E65621 /* NSEntityDescriptionExtension.swift in Sources */,
 				C434AABB1D8F2BE500732D3D /* SGYOperation.swift in Sources */,
 				C434AABD1D8F2BE500732D3D /* UIColorExtension.swift in Sources */,
 			);
