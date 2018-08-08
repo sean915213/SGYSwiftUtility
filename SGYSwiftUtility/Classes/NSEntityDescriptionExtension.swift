@@ -18,6 +18,6 @@ extension NSEntityDescription {
     }
 }
 
-extension NamedManagedObject {
+extension NSManagedObject: NamedManagedObject {
     public static var entityName: String { return String(describing: self) }
 }
