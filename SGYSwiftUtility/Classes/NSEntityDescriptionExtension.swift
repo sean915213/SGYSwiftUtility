@@ -8,16 +8,16 @@
 import Foundation
 import CoreData
 
-protocol NamedManagedObject where Self: NSManagedObject {
+public protocol NamedManagedObject where Self: NSManagedObject {
     static var entityName: String { get }
 }
 
 extension NSEntityDescription {
-    class func insertNewObject<T>(forEntityClass entityClass: T.Type, into context: NSManagedObjectContext) -> T where T: NamedManagedObject {
+    public class func insertNewObject<T>(forEntityClass entityClass: T.Type, into context: NSManagedObjectContext) -> T where T: NamedManagedObject {
         return insertNewObject(forEntityName: entityClass.entityName, into: context) as! T
     }
 }
 
 extension NamedManagedObject {
-    static var entityName: String { return String(describing: self) }
+    public static var entityName: String { return String(describing: self) }
 }
