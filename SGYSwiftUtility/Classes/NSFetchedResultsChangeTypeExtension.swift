@@ -8,8 +8,8 @@
 import Foundation
 import CoreData
 
-extension NSFetchedResultsChangeType: CustomDebugStringConvertible {
-    public var debugDescription: String {
+extension NSFetchedResultsChangeType: CustomStringConvertible {
+    public var description: String {
         switch self {
         case .delete: return "Delete"
         case .insert: return "Insert"
