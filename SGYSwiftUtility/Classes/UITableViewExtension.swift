@@ -14,6 +14,10 @@ extension UITableView {
         self.register(cellClass, forCellReuseIdentifier: reuseIdentifier.rawValue)
     }
     
+    public func dequeueReusableCell<T: RawRepresentable, U: UITableViewCell>(withIdentifier identifier: T, for indexPath: IndexPath) -> U where T.RawValue == String {
+        return self.dequeueReusableCell(withIdentifier: identifier.rawValue, for: indexPath)
+    }
+    
     public func dequeueReusableCell<T: UITableViewCell>(withIdentifier identifier: String, for indexPath: IndexPath) -> T {
         return self.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! T
     }
