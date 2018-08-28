@@ -10,6 +10,14 @@ import Foundation
 
 extension UICollectionView {
     
+    public func register<T: UICollectionViewCell, U: RawRepresentable>(_ cellClass: T.Type, forCellWithReuseIdentifier reuseIdentifier: U) where U.RawValue == String {
+        register(cellClass, forCellWithReuseIdentifier: reuseIdentifier.rawValue)
+    }
+    
+    public func dequeueReusableCell<T: RawRepresentable, U: UICollectionViewCell>(withReuseIdentifier reuseIdentifier: T, for indexPath: IndexPath) -> U where T.RawValue == String {
+        return dequeueReusableCell(withReuseIdentifier: reuseIdentifier.rawValue, for: indexPath)
+    }
+    
     /**
      Provides a method for dequeueing typed cells from `UICollectionView`.
      
