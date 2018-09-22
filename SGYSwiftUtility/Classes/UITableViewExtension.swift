@@ -10,8 +10,12 @@ import Foundation
 
 extension UITableView {
     
-    public func register<T: RawRepresentable>(_ cellClass: AnyClass, forCellReuseIdentifier reuseIdentifier: T) where T.RawValue == String {
+    public func register<T: RawRepresentable>(_ cellClass: UITableViewCell.Type, forCellReuseIdentifier reuseIdentifier: T) where T.RawValue == String {
         self.register(cellClass, forCellReuseIdentifier: reuseIdentifier.rawValue)
+    }
+    
+    public func register<T>(_ cellClass: UITableViewCell.Type, forCellReuseIdentifiers identifiers: T.Type) where T: RawRepresentable & CaseIterable, T.RawValue == String {
+        identifiers.allCases.forEach { register(cellClass, forCellReuseIdentifier: $0) }
     }
     
     public func dequeueReusableCell<T: RawRepresentable, U: UITableViewCell>(withIdentifier identifier: T, for indexPath: IndexPath) -> U where T.RawValue == String {

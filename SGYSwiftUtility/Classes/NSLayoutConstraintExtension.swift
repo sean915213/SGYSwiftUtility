@@ -111,6 +111,18 @@ extension NSLayoutConstraint {
         
         return NSLayoutConstraint.constraints(withVisualFormat: layoutString, options: NSLayoutConstraint.FormatOptions(), metrics: layoutMetrics, views: layoutViews)
     }
+    
+    @discardableResult
+    public func activate() -> NSLayoutConstraint {
+        isActive = true
+        return self
+    }
+    
+    @discardableResult
+    public func deactivate() -> NSLayoutConstraint {
+        isActive = false
+        return self
+    }
 }
 
 extension Sequence where Element: NSLayoutConstraint {
