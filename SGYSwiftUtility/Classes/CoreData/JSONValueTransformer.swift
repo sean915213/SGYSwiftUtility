@@ -26,8 +26,8 @@ public class JSONTransformer<T>: ValueTransformer where T: Codable {
     
     // MARK: - Properties
     
-    private var encoder: JSONEncoder
-    private var decoder: JSONDecoder
+    private let encoder: JSONEncoder
+    private let decoder: JSONDecoder
     
     // MARK: - Methods
     
