@@ -13,6 +13,10 @@
 		7421F88E2159AE9C00C5E912 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7421F88C2159AE9000C5E912 /* UIViewControllerExtension.swift */; };
 		7421F88F2159AE9F00C5E912 /* NSFetchedResultsChangeTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743A2845212A3B020031D2A1 /* NSFetchedResultsChangeTypeExtension.swift */; };
 		742B69A320CB35C000EA5F2E /* CLAuthorizationStatusExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B69A220CB35C000EA5F2E /* CLAuthorizationStatusExtension.swift */; };
+		74405C6A218E382E00BA3A69 /* NamedManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74405C68218E382700BA3A69 /* NamedManagedObject.swift */; };
+		74405C6C218E388200BA3A69 /* NSEntityDescriptionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74405C6B218E388200BA3A69 /* NSEntityDescriptionExtension.swift */; };
+		74405C6E218E38D700BA3A69 /* NSManagedObjectContextExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74405C6D218E38D700BA3A69 /* NSManagedObjectContextExtension.swift */; };
+		74405C70218E391000BA3A69 /* JSONValueTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74405C6F218E391000BA3A69 /* JSONValueTransformer.swift */; };
 		745BD45020CB368600AFE76C /* SingleValueCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745BD44F20CB368600AFE76C /* SingleValueCodable.swift */; };
 		745BD45220CB370200AFE76C /* CodableURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745BD45120CB370200AFE76C /* CodableURL.swift */; };
 		7483E2871FBA3B8200D1BC58 /* URLComponentsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7483E2861FBA3B8200D1BC58 /* URLComponentsExtension.swift */; };
@@ -21,7 +25,6 @@
 		C434AAB51D8F2BE500732D3D /* DataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C434AAA81D8F2BE500732D3D /* DataExtension.swift */; };
 		C434AAB61D8F2BE500732D3D /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C434AAA91D8F2BE500732D3D /* Logger.swift */; };
 		C434AAB71D8F2BE500732D3D /* NSLayoutConstraintExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C434AAAA1D8F2BE500732D3D /* NSLayoutConstraintExtension.swift */; };
-		C434AAB81D8F2BE500732D3D /* CoreDataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C434AAAB1D8F2BE500732D3D /* CoreDataExtensions.swift */; };
 		C434AAB91D8F2BE500732D3D /* NSUserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C434AAAC1D8F2BE500732D3D /* NSUserDefaultsExtension.swift */; };
 		C434AABA1D8F2BE500732D3D /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C434AAAE1D8F2BE500732D3D /* AsyncOperation.swift */; };
 		C434AABB1D8F2BE500732D3D /* SGYOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C434AAAF1D8F2BE500732D3D /* SGYOperation.swift */; };
@@ -58,6 +61,10 @@
 		7421F88C2159AE9000C5E912 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		742B69A220CB35C000EA5F2E /* CLAuthorizationStatusExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLAuthorizationStatusExtension.swift; sourceTree = "<group>"; };
 		743A2845212A3B020031D2A1 /* NSFetchedResultsChangeTypeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSFetchedResultsChangeTypeExtension.swift; sourceTree = "<group>"; };
+		74405C68218E382700BA3A69 /* NamedManagedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamedManagedObject.swift; sourceTree = "<group>"; };
+		74405C6B218E388200BA3A69 /* NSEntityDescriptionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSEntityDescriptionExtension.swift; sourceTree = "<group>"; };
+		74405C6D218E38D700BA3A69 /* NSManagedObjectContextExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSManagedObjectContextExtension.swift; sourceTree = "<group>"; };
+		74405C6F218E391000BA3A69 /* JSONValueTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONValueTransformer.swift; sourceTree = "<group>"; };
 		745BD44F20CB368600AFE76C /* SingleValueCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleValueCodable.swift; sourceTree = "<group>"; };
 		745BD45120CB370200AFE76C /* CodableURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableURL.swift; sourceTree = "<group>"; };
 		7483E2861FBA3B8200D1BC58 /* URLComponentsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLComponentsExtension.swift; sourceTree = "<group>"; };
@@ -71,7 +78,6 @@
 		C434AAA81D8F2BE500732D3D /* DataExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataExtension.swift; sourceTree = "<group>"; };
 		C434AAA91D8F2BE500732D3D /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		C434AAAA1D8F2BE500732D3D /* NSLayoutConstraintExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraintExtension.swift; sourceTree = "<group>"; };
-		C434AAAB1D8F2BE500732D3D /* CoreDataExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataExtensions.swift; sourceTree = "<group>"; };
 		C434AAAC1D8F2BE500732D3D /* NSUserDefaultsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSUserDefaultsExtension.swift; sourceTree = "<group>"; };
 		C434AAAE1D8F2BE500732D3D /* AsyncOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
 		C434AAAF1D8F2BE500732D3D /* SGYOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGYOperation.swift; sourceTree = "<group>"; };
@@ -160,6 +166,18 @@
 			path = "Target Support Files/Pods-SGYSwiftUtility_Tests";
 			sourceTree = "<group>";
 		};
+		74405C67218E37FA00BA3A69 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				743A2845212A3B020031D2A1 /* NSFetchedResultsChangeTypeExtension.swift */,
+				74405C68218E382700BA3A69 /* NamedManagedObject.swift */,
+				74405C6B218E388200BA3A69 /* NSEntityDescriptionExtension.swift */,
+				74405C6D218E38D700BA3A69 /* NSManagedObjectContextExtension.swift */,
+				74405C6F218E391000BA3A69 /* JSONValueTransformer.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		745BD44E20CB364E00AFE76C /* Codable */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,12 +201,12 @@
 		9B2ED305F27D14A4BF58C615C67B12C0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				74405C67218E37FA00BA3A69 /* CoreData */,
 				745BD44E20CB364E00AFE76C /* Codable */,
 				C434AAA71D8F2BE500732D3D /* SequenceExtension.swift */,
 				C434AAA81D8F2BE500732D3D /* DataExtension.swift */,
 				C434AAA91D8F2BE500732D3D /* Logger.swift */,
 				C434AAAA1D8F2BE500732D3D /* NSLayoutConstraintExtension.swift */,
-				C434AAAB1D8F2BE500732D3D /* CoreDataExtensions.swift */,
 				C434AAAC1D8F2BE500732D3D /* NSUserDefaultsExtension.swift */,
 				C434AAAD1D8F2BE500732D3D /* Operations */,
 				C434AAB01D8F2BE500732D3D /* UICollectionViewExtension.swift */,
@@ -197,7 +215,6 @@
 				C434AAB31D8F2BE500732D3D /* UIViewExtension.swift */,
 				7483E2861FBA3B8200D1BC58 /* URLComponentsExtension.swift */,
 				742B69A220CB35C000EA5F2E /* CLAuthorizationStatusExtension.swift */,
-				743A2845212A3B020031D2A1 /* NSFetchedResultsChangeTypeExtension.swift */,
 				7421F88C2159AE9000C5E912 /* UIViewControllerExtension.swift */,
 			);
 			path = Classes;
@@ -354,10 +371,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C434AABC1D8F2BE500732D3D /* UICollectionViewExtension.swift in Sources */,
+				74405C6E218E38D700BA3A69 /* NSManagedObjectContextExtension.swift in Sources */,
 				C434AAB61D8F2BE500732D3D /* Logger.swift in Sources */,
 				7421F88E2159AE9C00C5E912 /* UIViewControllerExtension.swift in Sources */,
-				C434AAB81D8F2BE500732D3D /* CoreDataExtensions.swift in Sources */,
 				C434AAB71D8F2BE500732D3D /* NSLayoutConstraintExtension.swift in Sources */,
+				74405C70218E391000BA3A69 /* JSONValueTransformer.swift in Sources */,
 				C434AABF1D8F2BE500732D3D /* UIViewExtension.swift in Sources */,
 				C434AAB51D8F2BE500732D3D /* DataExtension.swift in Sources */,
 				C434AABE1D8F2BE500732D3D /* UITableViewExtension.swift in Sources */,
@@ -365,10 +383,12 @@
 				7421F88F2159AE9F00C5E912 /* NSFetchedResultsChangeTypeExtension.swift in Sources */,
 				745BD45220CB370200AFE76C /* CodableURL.swift in Sources */,
 				742B69A320CB35C000EA5F2E /* CLAuthorizationStatusExtension.swift in Sources */,
+				74405C6C218E388200BA3A69 /* NSEntityDescriptionExtension.swift in Sources */,
 				C434AAB41D8F2BE500732D3D /* SequenceExtension.swift in Sources */,
 				C434AABA1D8F2BE500732D3D /* AsyncOperation.swift in Sources */,
 				745BD45020CB368600AFE76C /* SingleValueCodable.swift in Sources */,
 				A79F21C022D34567D0A6D6645ED976C0 /* SGYSwiftUtility-dummy.m in Sources */,
+				74405C6A218E382E00BA3A69 /* NamedManagedObject.swift in Sources */,
 				C434AABB1D8F2BE500732D3D /* SGYOperation.swift in Sources */,
 				C434AABD1D8F2BE500732D3D /* UIColorExtension.swift in Sources */,
 			);
