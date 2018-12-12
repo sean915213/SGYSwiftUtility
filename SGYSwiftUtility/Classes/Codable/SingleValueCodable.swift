@@ -10,7 +10,7 @@ import Foundation
 // Protocol largely taken from:
 // http://www.russbishop.net/singlevaluecodable
 
-protocol SingleValueCodable: Codable, RawRepresentable where RawValue: Codable { }
+public protocol SingleValueCodable: Codable, RawRepresentable where RawValue: Codable { }
 
 extension SingleValueCodable {
     
