@@ -6,7 +6,7 @@
 //
 //
 
-import Foundation
+import UIKit
 
 // No constant is exposed for the "aqua" space between siblings so calculate one on the fly
 private let siblingAquaSpacing: CGFloat = {
