@@ -19,6 +19,7 @@
 		74405C70218E391000BA3A69 /* JSONValueTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74405C6F218E391000BA3A69 /* JSONValueTransformer.swift */; };
 		745BD45020CB368600AFE76C /* SingleValueCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745BD44F20CB368600AFE76C /* SingleValueCodable.swift */; };
 		745BD45220CB370200AFE76C /* CodableURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745BD45120CB370200AFE76C /* CodableURL.swift */; };
+		74612C5721FCEBC600006E15 /* NSPersistentContainerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74612C5621FCEBC600006E15 /* NSPersistentContainerExtension.swift */; };
 		7483E2871FBA3B8200D1BC58 /* URLComponentsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7483E2861FBA3B8200D1BC58 /* URLComponentsExtension.swift */; };
 		A79F21C022D34567D0A6D6645ED976C0 /* SGYSwiftUtility-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0589D86881C537CC0D42696C70505297 /* SGYSwiftUtility-dummy.m */; };
 		C434AAB41D8F2BE500732D3D /* SequenceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C434AAA71D8F2BE500732D3D /* SequenceExtension.swift */; };
@@ -67,6 +68,7 @@
 		74405C6F218E391000BA3A69 /* JSONValueTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONValueTransformer.swift; sourceTree = "<group>"; };
 		745BD44F20CB368600AFE76C /* SingleValueCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleValueCodable.swift; sourceTree = "<group>"; };
 		745BD45120CB370200AFE76C /* CodableURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableURL.swift; sourceTree = "<group>"; };
+		74612C5621FCEBC600006E15 /* NSPersistentContainerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSPersistentContainerExtension.swift; sourceTree = "<group>"; };
 		7483E2861FBA3B8200D1BC58 /* URLComponentsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLComponentsExtension.swift; sourceTree = "<group>"; };
 		9211BCDD3777E02438AC9E11B4DB6F1A /* Pods-SGYSwiftUtility_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SGYSwiftUtility_Tests-resources.sh"; sourceTree = "<group>"; };
 		9379D47E9E24AA43C7B3A4A726D02E95 /* Pods-SGYSwiftUtility_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SGYSwiftUtility_Tests-umbrella.h"; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				74405C6B218E388200BA3A69 /* NSEntityDescriptionExtension.swift */,
 				74405C6D218E38D700BA3A69 /* NSManagedObjectContextExtension.swift */,
 				74405C6F218E391000BA3A69 /* JSONValueTransformer.swift */,
+				74612C5621FCEBC600006E15 /* NSPersistentContainerExtension.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 				7421F88F2159AE9F00C5E912 /* NSFetchedResultsChangeTypeExtension.swift in Sources */,
 				745BD45220CB370200AFE76C /* CodableURL.swift in Sources */,
 				742B69A320CB35C000EA5F2E /* CLAuthorizationStatusExtension.swift in Sources */,
+				74612C5721FCEBC600006E15 /* NSPersistentContainerExtension.swift in Sources */,
 				74405C6C218E388200BA3A69 /* NSEntityDescriptionExtension.swift in Sources */,
 				C434AAB41D8F2BE500732D3D /* SequenceExtension.swift in Sources */,
 				C434AABA1D8F2BE500732D3D /* AsyncOperation.swift in Sources */,
