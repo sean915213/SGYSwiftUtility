@@ -21,13 +21,13 @@
 		745BD45020CB368600AFE76C /* SingleValueCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745BD44F20CB368600AFE76C /* SingleValueCodable.swift */; };
 		745BD45220CB370200AFE76C /* CodableURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745BD45120CB370200AFE76C /* CodableURL.swift */; };
 		74612C5721FCEBC600006E15 /* NSPersistentContainerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74612C5621FCEBC600006E15 /* NSPersistentContainerExtension.swift */; };
-		748AE3212217902D000015E5 /* URLComponentsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7483E2861FBA3B8200D1BC58 /* URLComponentsExtension.swift */; };
+		7483E2871FBA3B8200D1BC58 /* URLComponentsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7483E2861FBA3B8200D1BC58 /* URLComponentsExtension.swift */; };
 		A79F21C022D34567D0A6D6645ED976C0 /* SGYSwiftUtility-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0589D86881C537CC0D42696C70505297 /* SGYSwiftUtility-dummy.m */; };
 		C434AAB41D8F2BE500732D3D /* SequenceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C434AAA71D8F2BE500732D3D /* SequenceExtension.swift */; };
 		C434AAB51D8F2BE500732D3D /* DataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C434AAA81D8F2BE500732D3D /* DataExtension.swift */; };
 		C434AAB61D8F2BE500732D3D /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C434AAA91D8F2BE500732D3D /* Logger.swift */; };
 		C434AAB71D8F2BE500732D3D /* NSLayoutConstraintExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C434AAAA1D8F2BE500732D3D /* NSLayoutConstraintExtension.swift */; };
-		C434AAB91D8F2BE500732D3D /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C434AAAC1D8F2BE500732D3D /* UserDefaultsExtension.swift */; };
+		C434AAB91D8F2BE500732D3D /* NSUserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C434AAAC1D8F2BE500732D3D /* NSUserDefaultsExtension.swift */; };
 		C434AABA1D8F2BE500732D3D /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C434AAAE1D8F2BE500732D3D /* AsyncOperation.swift */; };
 		C434AABB1D8F2BE500732D3D /* SGYOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C434AAAF1D8F2BE500732D3D /* SGYOperation.swift */; };
 		C434AABC1D8F2BE500732D3D /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C434AAB01D8F2BE500732D3D /* UICollectionViewExtension.swift */; };
@@ -82,7 +82,7 @@
 		C434AAA81D8F2BE500732D3D /* DataExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataExtension.swift; sourceTree = "<group>"; };
 		C434AAA91D8F2BE500732D3D /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		C434AAAA1D8F2BE500732D3D /* NSLayoutConstraintExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraintExtension.swift; sourceTree = "<group>"; };
-		C434AAAC1D8F2BE500732D3D /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
+		C434AAAC1D8F2BE500732D3D /* NSUserDefaultsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSUserDefaultsExtension.swift; sourceTree = "<group>"; };
 		C434AAAE1D8F2BE500732D3D /* AsyncOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
 		C434AAAF1D8F2BE500732D3D /* SGYOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGYOperation.swift; sourceTree = "<group>"; };
 		C434AAB01D8F2BE500732D3D /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
@@ -117,12 +117,7 @@
 		0682C1C09AA5EF17B889102D9C5C6BB1 /* SGYSwiftUtility */ = {
 			isa = PBXGroup;
 			children = (
-				C434AAA91D8F2BE500732D3D /* Logger.swift */,
-				74019BA9220239D800EB21E7 /* SemanticVersion.swift */,
-				C434AAAD1D8F2BE500732D3D /* Operations */,
-				745BD44E20CB364E00AFE76C /* Codable */,
-				74405C67218E37FA00BA3A69 /* CoreData */,
-				748AE3202217900C000015E5 /* Extensions */,
+				9B2ED305F27D14A4BF58C615C67B12C0 /* Classes */,
 			);
 			path = SGYSwiftUtility;
 			sourceTree = "<group>";
@@ -197,24 +192,6 @@
 			path = Codable;
 			sourceTree = "<group>";
 		};
-		748AE3202217900C000015E5 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				C434AAB11D8F2BE500732D3D /* UIColorExtension.swift */,
-				C434AAB01D8F2BE500732D3D /* UICollectionViewExtension.swift */,
-				C434AAB21D8F2BE500732D3D /* UITableViewExtension.swift */,
-				C434AAB31D8F2BE500732D3D /* UIViewExtension.swift */,
-				7483E2861FBA3B8200D1BC58 /* URLComponentsExtension.swift */,
-				742B69A220CB35C000EA5F2E /* CLAuthorizationStatusExtension.swift */,
-				7421F88C2159AE9000C5E912 /* UIViewControllerExtension.swift */,
-				C434AAAA1D8F2BE500732D3D /* NSLayoutConstraintExtension.swift */,
-				C434AAAC1D8F2BE500732D3D /* UserDefaultsExtension.swift */,
-				C434AAA81D8F2BE500732D3D /* DataExtension.swift */,
-				C434AAA71D8F2BE500732D3D /* SequenceExtension.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +201,29 @@
 				C89CC869DC3624E425060F0AD802FA6D /* Products */,
 				9EFB7A0AA7274E05868DBCAB88B74ACC /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		9B2ED305F27D14A4BF58C615C67B12C0 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				74405C67218E37FA00BA3A69 /* CoreData */,
+				745BD44E20CB364E00AFE76C /* Codable */,
+				C434AAA71D8F2BE500732D3D /* SequenceExtension.swift */,
+				C434AAA81D8F2BE500732D3D /* DataExtension.swift */,
+				C434AAA91D8F2BE500732D3D /* Logger.swift */,
+				C434AAAA1D8F2BE500732D3D /* NSLayoutConstraintExtension.swift */,
+				C434AAAC1D8F2BE500732D3D /* NSUserDefaultsExtension.swift */,
+				C434AAAD1D8F2BE500732D3D /* Operations */,
+				C434AAB01D8F2BE500732D3D /* UICollectionViewExtension.swift */,
+				C434AAB11D8F2BE500732D3D /* UIColorExtension.swift */,
+				C434AAB21D8F2BE500732D3D /* UITableViewExtension.swift */,
+				C434AAB31D8F2BE500732D3D /* UIViewExtension.swift */,
+				7483E2861FBA3B8200D1BC58 /* URLComponentsExtension.swift */,
+				742B69A220CB35C000EA5F2E /* CLAuthorizationStatusExtension.swift */,
+				7421F88C2159AE9000C5E912 /* UIViewControllerExtension.swift */,
+				74019BA9220239D800EB21E7 /* SemanticVersion.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		9EFB7A0AA7274E05868DBCAB88B74ACC /* Targets Support Files */ = {
@@ -368,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2252E66E1CC0B9C308A66E52086730E2 /* Pods-SGYSwiftUtility_Tests-dummy.m in Sources */,
+				7483E2871FBA3B8200D1BC58 /* URLComponentsExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,12 +381,11 @@
 				C434AAB61D8F2BE500732D3D /* Logger.swift in Sources */,
 				7421F88E2159AE9C00C5E912 /* UIViewControllerExtension.swift in Sources */,
 				C434AAB71D8F2BE500732D3D /* NSLayoutConstraintExtension.swift in Sources */,
-				748AE3212217902D000015E5 /* URLComponentsExtension.swift in Sources */,
 				74405C70218E391000BA3A69 /* JSONValueTransformer.swift in Sources */,
 				C434AABF1D8F2BE500732D3D /* UIViewExtension.swift in Sources */,
 				C434AAB51D8F2BE500732D3D /* DataExtension.swift in Sources */,
 				C434AABE1D8F2BE500732D3D /* UITableViewExtension.swift in Sources */,
-				C434AAB91D8F2BE500732D3D /* UserDefaultsExtension.swift in Sources */,
+				C434AAB91D8F2BE500732D3D /* NSUserDefaultsExtension.swift in Sources */,
 				7421F88F2159AE9F00C5E912 /* NSFetchedResultsChangeTypeExtension.swift in Sources */,
 				745BD45220CB370200AFE76C /* CodableURL.swift in Sources */,
 				742B69A320CB35C000EA5F2E /* CLAuthorizationStatusExtension.swift in Sources */,
