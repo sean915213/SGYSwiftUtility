@@ -27,7 +27,7 @@ extension Data {
             index = string.index(index, offsetBy: 2)
         } while index < string.endIndex
         // Initialize
-        self.init(bytes: byteArray)
+        self.init(byteArray)
     }
     
     public func hexString() -> String? {

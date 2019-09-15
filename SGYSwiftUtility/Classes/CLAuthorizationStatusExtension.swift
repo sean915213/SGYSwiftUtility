@@ -17,6 +17,7 @@ extension CLAuthorizationStatus: CustomStringConvertible {
         case .denied: return "Denied"
         case .authorizedAlways: return "Authorized Always"
         case .authorizedWhenInUse: return "Authorized When In Use"
+        @unknown default: return "Unknown"
         }
     }
 }

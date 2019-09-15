@@ -15,6 +15,7 @@ extension NSFetchedResultsChangeType: CustomStringConvertible {
         case .insert: return "Insert"
         case .move: return "Move"
         case .update: return "Update"
+        @unknown default: return "Unknown"
         }
     }
 }
